@@ -1,6 +1,6 @@
 # News Twitter Bot
 Twitter bot that replies to news tweets performing search and replace from a collaborative translation table. Users can contribute to the translation table via DM or @mentions.
-The translation table is then human reviewed and approved entries are appended to the production table.
+The translation table `pending_dic.txt` is then human reviewed and approved entries are appended to the production table `dic.txt`.
 
 ## Setup with Google Cloud Platform
 <img src="https://miro.medium.com/max/12516/1*CMz4r3-pEFp3Po6oHv-JxQ.png" width="350"/>
