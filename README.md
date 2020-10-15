@@ -12,3 +12,4 @@ After creating your bot account, go to the [Developer Twitter Page](https://deve
 Go to the [Google Cloud Console](https://console.cloud.google.com/) to get started. Set up billing and create a new project. Don't worry about getting billed, the scale of this project should fall well inside the free tier.
 Once the project is set up, go to the [Cloud Functions](https://console.cloud.google.com/functions) to begin importing the code that will be executed.
 
+We will be using an HTTP trigger so whenever a request is made to the URL the function will be executed. Choose 128MiB of allocated memory since it's the smallest. Our bot is written on Python so select Python3.7 as the runtime type and `send_tweet()` as the entry point. The `send_tweet()` function inside `bot.py` will actually be the function executed.
