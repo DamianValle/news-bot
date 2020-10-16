@@ -2,9 +2,8 @@ import tweepy
 from keys import keys
 from utils import is_mention_valid
 
-"""
-Perform authentication
-"""
+
+# Perform authentication
 CONSUMER_KEY = keys['consumer_key']
 CONSUMER_SECRET = keys['consumer_secret']
 ACCESS_TOKEN = keys['access_token']
@@ -22,8 +21,3 @@ for mention in api.mentions_timeline():
 		pending_dic_file = open('./pending_dic.txt', 'a+')
 		pending_dic_file.write(text.split(' ', 1)[1] + "\n")
 		pending_dic_file.close()
-
-
-
-
-

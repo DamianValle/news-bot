@@ -1,12 +1,3 @@
-pipi:popo
-el tribunal:el Taj Majal
-el tribunal:el Taj Majal
-sanchez:Panchez
-el tribunal:el Taj Majal
-sanchez:Panchez
-el tribunal:el Taj Majal
-sanchez:Panchez
-el tribunal:el Taj Majal
-sanchez:Panchez
-el tribunal:el Taj Majal
-sanchez:Panchez
+word1:word2
+entries here might:::have errors
+they have to be:human supervised
