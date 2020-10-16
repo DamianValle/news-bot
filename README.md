@@ -1,7 +1,6 @@
+<img src="img/banner.png" width="500"/>
 # News Twitter Bot
 See the bot in action here: [@ny_tames](https://twitter.com/ny_tames).
-
-<img src="img/banner.png" width="400"/>
 
 This code implements a twitter bot that replies to news tweets performing search and replace from a collaborative translation table. Users can contribute to the translation table via DM or @mentions.
 The translation table `pending_dic.txt` is then human reviewed and approved entries are appended to the production table `dic.txt`.
