@@ -1,4 +1,5 @@
 <img src="img/banner.png" width="500"/>
+
 # News Twitter Bot
 See the bot in action here: [@ny_tames](https://twitter.com/ny_tames).
 
