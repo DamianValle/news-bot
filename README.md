@@ -1,5 +1,9 @@
 # News Twitter Bot
-Twitter bot that replies to news tweets performing search and replace from a collaborative translation table. Users can contribute to the translation table via DM or @mentions.
+See the bot in action here: [@ny_tames](https://twitter.com/ny_tames).
+
+<img src="img/banner.png" width="400"/>
+
+This code implements a twitter bot that replies to news tweets performing search and replace from a collaborative translation table. Users can contribute to the translation table via DM or @mentions.
 The translation table `pending_dic.txt` is then human reviewed and approved entries are appended to the production table `dic.txt`.
 
 ## Setup tweepy credentials
@@ -12,6 +16,8 @@ After creating your bot account, go to the [Developer Twitter Page](https://deve
 Go to the [Google Cloud Console](https://console.cloud.google.com/) to get started. Set up billing and create a new project. Don't worry about getting billed, the scale of this project should fall well inside the free tier.
 Once the project is set up, go to the [Cloud Functions](https://console.cloud.google.com/functions) to begin importing the code that will be executed.
 
-We will be using an HTTP trigger so whenever a request is made to the URL the function will be executed. Choose 128MiB of allocated memory since it's the smallest. Our bot is written on Python so select Python3.7 as the runtime type and `send_tweet()` as the entry point. The `send_tweet()` function inside `bot.py` will actually be the function executed.
+We will be using an HTTP trigger so whenever a request is made to the URL the function will be executed. Choose 128MiB of allocated memory since it's the smallest. Our bot is written on Python so select Python3.7 as the runtime type and `send_tweet()` as the entry point. The `send_tweet()` function inside `bot.py` will actually be the function executed. If this is your first time, you will have to enable Cloud Build API.
 
-Next, upload the files `mentions.py`, `requirements.txt`, `dic.txt`, `pending_dic.txt` and hit deploy.
+Next, upload the files `main.py`, `mentions.py`, `requirements.txt`, `dic.txt`, `pending_dic.txt`, select `bot` as the entry point and hit deploy. Now we have a function that gets executed everytime someone visits the HTTP trigger, it is time to create an automatic trigger.
+
+First go into the trigger section of the function and copy the trigger URL to your clipboard. Now go into the [Google Cloud Scheduler](https://console.cloud.google.com/cloudscheduler) and Create a job, select a region. Give it a name, a UNIX crontab format and HTTP target.
